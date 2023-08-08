@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./library.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>LIBRARY</h1>
+      </header>
+
+      <div class="book-content">
+        
+      </div>
+
+      <div class="form hidden">
+        <h2>ADD A BOOK:</h2>
+        <input type="text" id="title" placeholder="TITLE" minlength="3" required>
+        <input type="text" id="author" placeholder="AUTHOR" minlength="3" required>
+        <input type="number" id="pages" placeholder="PAGES" maxlength="1000" required>
+        <label for="read">Have you read it?</label>
+        <input type="checkbox" id="read" value="Not read" onclick="toggleReadStatus()">
+        
+        <div class="form-button-group">
+          <button id="submit" onclick="submitForm()">Submit</button>
+          <button id="cancel" onclick="cancelForm()">Cancel</button>
+        </div>
+      </div>
+
+      <div class="add-book-button-container">
+        <div class="add-btn">
+          <button id="btn-add-book" onclick="showForm()">+</button>
+        </div>
+      </div>
+
+      <footer>
+        <p>Travis Packer, 2023 - Created for The Odin Project</p>
+      </footer>
+      </div>
+    </div>
+  </body>
+</html>
