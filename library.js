@@ -12,7 +12,21 @@ const FORM_READ_STATUS = FORM.querySelector("#read");
 
 let myLibrary = [];
 
-function Book(title, author, pages, isItRead) 
+class Book {
+  constructor(title, author, pages, isItRead) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.isItRead = isItRead;
+  }
+  
+    getInfo()
+    {
+      return `${this.title} ${this.author} ${this.pages} ${this.isItRead}`;
+    }
+}
+
+/*function Book(title, author, pages, isItRead) 
 {
   this.title = title;
   this.author = author;
@@ -22,7 +36,7 @@ function Book(title, author, pages, isItRead)
   {
     return title + " " + author + " " + pages + " " + isItRead;
   }
-}
+}*/
 
 function displayBooks()
 {
